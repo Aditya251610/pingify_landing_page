@@ -39,7 +39,7 @@ export default function Header() {
             <a href="#features" className="text-gray-300 hover:text-cyan-400 transition-colors">
               Features
             </a>
-            <a href="#docs" className="text-gray-300 hover:text-cyan-400 transition-colors">
+            <a href="/docs" className="text-gray-300 hover:text-cyan-400 transition-colors">
               Docs
             </a>
           </nav>
