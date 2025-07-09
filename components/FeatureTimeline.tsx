@@ -28,7 +28,7 @@ export default function FeatureTimeline() {
                 </p>
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-cyan-500 rounded-full animate-pulse"></div>
-                  <span className="text-gray-300">Instant setup</span>
+                  <span className="text-gray-300 text-caption">Instant setup</span>
                 </div>
               </div>
             </div>
@@ -58,7 +58,7 @@ export default function FeatureTimeline() {
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-gray-300">Email notifications enabled</span>
+                    <span className="text-gray-300 text-caption">Email notifications enabled</span>
                   </div>
                 </div>
               </div>
@@ -88,7 +88,7 @@ export default function FeatureTimeline() {
                 </p>
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-orange-500 rounded-full animate-pulse"></div>
-                  <span className="text-gray-300">Structured logging</span>
+                  <span className="text-gray-300 text-caption">Structured logging</span>
                 </div>
               </div>
             </div>
@@ -118,9 +118,9 @@ export default function FeatureTimeline() {
                 <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
                   <div className="flex items-center space-x-2 mb-2">
                     <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-                    <span className="text-purple-400 text-sm">AI Analysis</span>
+                    <span className="text-purple-400 text-sm text-caption">AI Analysis</span>
                   </div>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-gray-300 text-sm text-body">
                     "High response time detected. Consider optimizing database queries."
                   </p>
                 </div>
@@ -151,7 +151,7 @@ export default function FeatureTimeline() {
                 </p>
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
-                  <span className="text-gray-300">Zero-config deployment</span>
+                  <span className="text-gray-300 text-caption">Zero-config deployment</span>
                 </div>
               </div>
             </div>
@@ -180,12 +180,12 @@ export default function FeatureTimeline() {
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-gray-800 p-3 rounded-lg border border-gray-700 text-center">
-                    <div className="text-green-400 font-bold text-lg">99.9%</div>
-                    <div className="text-gray-400 text-sm">Uptime</div>
+                    <div className="text-green-400 text-lg text-subheading">99.9%</div>
+                    <div className="text-gray-400 text-sm text-caption">Uptime</div>
                   </div>
                   <div className="bg-gray-800 p-3 rounded-lg border border-gray-700 text-center">
-                    <div className="text-cyan-400 font-bold text-lg">&lt;10MB</div>
-                    <div className="text-gray-400 text-sm">Memory</div>
+                    <div className="text-cyan-400 text-lg text-subheading"><10MB</div>
+                    <div className="text-gray-400 text-sm text-caption">Memory</div>
                   </div>
                 </div>
               </div>
