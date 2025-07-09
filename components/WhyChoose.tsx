@@ -21,14 +21,12 @@ export default function WhyChoose() {
 
   return (
     <section className="relative py-20 bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden">
-      {/* Gradient overlay effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-blue-500/5"></div>
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-900/20 via-black to-black"></div>
+      <div className="relative">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="relative z-10 text-center mb-16"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -38,11 +36,11 @@ export default function WhyChoose() {
           <p className="text-xl text-gray-400">Here's why our customers love us</p>
         </motion.div>
         
-        <div className="relative z-10 grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              className="bg-gray-900 p-8 rounded-xl border border-gray-800 hover:border-cyan-500 transition-all group"
+              className="bg-gray-900/50 backdrop-blur-sm p-8 rounded-xl border border-gray-800 hover:border-cyan-500/50 transition-all group"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
@@ -69,7 +67,7 @@ export default function WhyChoose() {
         </div>
         
         <motion.div
-          className="relative z-10 text-center"
+          className="text-center"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -98,6 +96,7 @@ export default function WhyChoose() {
             View All Features
           </button>
         </motion.div>
+      </div>
       </div>
     </section>
   );
