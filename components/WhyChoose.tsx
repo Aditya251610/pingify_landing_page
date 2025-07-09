@@ -70,7 +70,26 @@ export default function WhyChoose() {
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all">
+          <button 
+            className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all transform hover:scale-105"
+            onClick={(e) => {
+              e.preventDefault();
+              // Small delay to ensure DOM is ready
+              setTimeout(() => {
+                const featuresSection = document.getElementById('features');
+                console.log('Scrolling to features section:', featuresSection); // Debug log
+                if (featuresSection) {
+                  featuresSection.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start',
+                    inline: 'nearest'
+                  });
+                } else {
+                  console.log('Features section not found');
+                }
+              }, 100);
+            }}
+          >
             View All Features
           </button>
         </motion.div>
