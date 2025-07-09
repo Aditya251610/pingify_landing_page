@@ -13,7 +13,7 @@ export default function Footer() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <p className="text-gray-400">
+          <p className="text-gray-400 text-caption">
             © 2025 Pingify. Built with ❤️ for developers.
           </p>
         </motion.div>

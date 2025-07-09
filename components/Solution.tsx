@@ -14,8 +14,8 @@ export default function Solution() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Our Solution</h2>
-            <p className="text-xl text-gray-400 mb-8">How Pingify can help you</p>
+            <h2 className="text-4xl text-heading text-white mb-6">Our Solution</h2>
+            <p className="text-xl text-body text-gray-400 mb-8">How Pingify can help you</p>
             
             <div className="space-y-6 mb-8">
               <div className="flex items-start space-x-4">
@@ -23,8 +23,8 @@ export default function Solution() {
                   <Monitor className="h-4 w-4 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold mb-2">Real-time Monitoring</h3>
-                  <p className="text-gray-400">Monitor your APIs 24/7 with instant alerts</p>
+                  <h3 className="text-white text-subheading mb-2">Real-time Monitoring</h3>
+                  <p className="text-gray-400 text-body">Monitor your APIs 24/7 with instant alerts</p>
                 </div>
               </div>
               
@@ -33,8 +33,8 @@ export default function Solution() {
                   <Activity className="h-4 w-4 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold mb-2">Performance Analytics</h3>
-                  <p className="text-gray-400">Get detailed insights into your API performance</p>
+                  <h3 className="text-white text-subheading mb-2">Performance Analytics</h3>
+                  <p className="text-gray-400 text-body">Get detailed insights into your API performance</p>
                 </div>
               </div>
               
@@ -43,8 +43,8 @@ export default function Solution() {
                   <Shield className="h-4 w-4 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold mb-2">Secure & Reliable</h3>
-                  <p className="text-gray-400">Built with security and reliability in mind</p>
+                  <h3 className="text-white text-subheading mb-2">Secure & Reliable</h3>
+                  <p className="text-gray-400 text-body">Built with security and reliability in mind</p>
                 </div>
               </div>
             </div>
@@ -72,8 +72,8 @@ export default function Solution() {
                 </div>
               </div>
               <div className="text-center">
-                <h3 className="text-white font-semibold mb-2">API Dashboard</h3>
-                <p className="text-gray-400 text-sm">Monitor all your APIs in one place</p>
+                <h3 className="text-white text-subheading mb-2">API Dashboard</h3>
+                <p className="text-gray-400 text-sm text-caption">Monitor all your APIs in one place</p>
               </div>
             </div>
           </motion.div>

@@ -32,8 +32,8 @@ export default function WhyChoose() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold text-white mb-4">Why Choose Pingify?</h2>
-          <p className="text-xl text-gray-400">Here's why our customers love us</p>
+          <h2 className="text-4xl text-heading text-white mb-4">Why Choose Pingify?</h2>
+          <p className="text-xl text-body text-gray-400">Here's why our customers love us</p>
         </motion.div>
         
         <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -52,14 +52,14 @@ export default function WhyChoose() {
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">{feature.title}</h3>
-                  <p className="text-cyan-400">{feature.subtitle}</p>
+                  <h3 className="text-xl text-subheading text-white">{feature.title}</h3>
+                  <p className="text-cyan-400 text-caption">{feature.subtitle}</p>
                 </div>
               </div>
               
-              <p className="text-gray-400 mb-6 leading-relaxed">{feature.description}</p>
+              <p className="text-gray-400 mb-6 text-body">{feature.description}</p>
               
-              <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform transition-transform">
+              <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform transition-transform text-caption">
                 Learn More <ArrowRight className="ml-2 h-4 w-4" />
               </button>
             </motion.div>
@@ -74,7 +74,7 @@ export default function WhyChoose() {
           viewport={{ once: true }}
         >
           <button 
-            className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all transform hover:scale-105"
+            className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg text-caption hover:from-cyan-600 hover:to-blue-700 transition-all transform hover:scale-105"
             onClick={(e) => {
               e.preventDefault();
               // Small delay to ensure DOM is ready

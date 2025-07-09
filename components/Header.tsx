@@ -29,15 +29,15 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <a href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer">
             <Terminal className="h-8 w-8 text-cyan-400" />
-            <span className="text-xl font-bold text-white">Pingify</span>
+            <span className="text-xl text-subheading text-white">Pingify</span>
           </a>
           
           <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="text-gray-300 hover:text-cyan-400 transition-colors">
+            <a href="#home" className="text-gray-300 hover:text-cyan-400 transition-colors text-caption">
               Home
             </a>
             <button 
-              className="text-gray-300 hover:text-cyan-400 transition-colors"
+              className="text-gray-300 hover:text-cyan-400 transition-colors text-caption"
               onClick={(e) => {
                 e.preventDefault();
                 // Small delay to ensure DOM is ready
@@ -58,7 +58,7 @@ export default function Header() {
             >
               Features
             </button>
-            <a href="/docs" className="text-gray-300 hover:text-cyan-400 transition-colors">
+            <a href="/docs" className="text-gray-300 hover:text-cyan-400 transition-colors text-caption">
               Docs
             </a>
           </nav>

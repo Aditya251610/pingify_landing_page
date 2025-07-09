@@ -203,8 +203,8 @@ export default function FeatureTimeline() {
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative z-10 text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Powerful Features</h2>
-          <p className="text-xl text-gray-400">Everything you need for comprehensive API monitoring</p>
+          <h2 className="text-4xl text-heading text-white mb-4">Powerful Features</h2>
+          <p className="text-xl text-body text-gray-400">Everything you need for comprehensive API monitoring</p>
         </div>
         <div className="relative z-10">
           <Timeline data={timelineData} />

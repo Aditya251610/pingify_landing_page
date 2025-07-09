@@ -13,7 +13,7 @@ export default function HeroSection() {
       <BackgroundBeams />
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         <motion.h1
-          className="text-5xl md:text-7xl font-bold text-white mb-6"
+          className="text-5xl md:text-7xl text-hero text-white mb-6"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -25,7 +25,7 @@ export default function HeroSection() {
         </motion.h1>
         
         <motion.h2
-          className="text-2xl md:text-3xl text-gray-300 mb-8"
+          className="text-2xl md:text-3xl text-subheading text-gray-300 mb-8"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -34,7 +34,7 @@ export default function HeroSection() {
         </motion.h2>
         
         <motion.p
-          className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
+          className="text-lg text-body text-gray-400 mb-12 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -49,10 +49,10 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-white mb-4 bg-gradient-to-r from-gray-800/80 to-gray-900/80 backdrop-blur-sm px-8 py-4 rounded-xl border border-gray-700/50 inline-block">
+            <div className="text-3xl md:text-4xl text-heading text-white mb-4 bg-gradient-to-r from-gray-800/80 to-gray-900/80 backdrop-blur-sm px-8 py-4 rounded-xl border border-gray-700/50 inline-block">
               <TextGenerateEffect words={sloganWords} />
             </div>
-            <p className="text-gray-400 text-lg">
+            <p className="text-gray-400 text-lg text-body">
               The complete solution for modern API management
             </p>
           </div>
