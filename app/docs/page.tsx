@@ -162,7 +162,7 @@ export default function DocsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
       {/* Header */}
       <header className="sticky top-0 z-40 bg-black/80 backdrop-blur-md border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -184,7 +184,7 @@ export default function DocsPage() {
 
       <div className="flex">
         {/* Sidebar */}
-        <aside className="sticky top-16 h-[calc(100vh-4rem)] w-64 bg-gray-900/50 border-r border-gray-800 overflow-y-auto">
+        <aside className="sticky top-16 h-[calc(100vh-4rem)] w-64 bg-gray-900/30 backdrop-blur-sm border-r border-gray-800 overflow-y-auto">
           <nav className="p-4 space-y-2">
             {navigationItems.map((item) => (
               <NavItemComponent key={item.id} item={item} />
@@ -193,7 +193,10 @@ export default function DocsPage() {
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 max-w-4xl mx-auto px-8 py-8">
+        <main className="flex-1 max-w-4xl mx-auto px-8 py-8 relative">
+          {/* Subtle overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
+          <div className="relative z-10">
           {/* Installation */}
           <section id="installation" className="mb-16">
             <motion.div
@@ -871,6 +874,7 @@ git push origin feature/your-feature-name
               </div>
             </motion.div>
           </section>
+          </div>
         </main>
       </div>
     </div>
