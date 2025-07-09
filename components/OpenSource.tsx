@@ -83,10 +83,15 @@ export default function OpenSource() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <button className="px-8 py-4 bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-lg font-semibold hover:from-gray-700 hover:to-gray-800 transition-all flex items-center space-x-2 border border-gray-700 hover:border-gray-600">
+              <a 
+                href="https://github.com/Aditya251610/pingify_landing_page" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-lg font-semibold hover:from-gray-700 hover:to-gray-800 transition-all flex items-center space-x-2 border border-gray-700 hover:border-gray-600"
+              >
                 <Github className="h-5 w-5" />
                 <span>View on GitHub</span>
-              </button>
+              </a>
             </motion.div>
             
             <motion.div
