@@ -49,7 +49,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <div className="text-center">
-            <div className="text-3xl md:text-4xl text-heading text-white mb-4 bg-gradient-to-r from-gray-800/80 to-gray-900/80 backdrop-blur-sm px-8 py-4 rounded-xl border border-gray-700/50 inline-block">
+            <div className="text-3xl md:text-4xl font-bold text-white mb-4 bg-gradient-to-r from-gray-800/90 to-gray-900/90 backdrop-blur-md px-12 py-6 rounded-2xl border border-gray-600/50 shadow-2xl inline-block">
               <TextGenerateEffect words={sloganWords} />
             </div>
             <p className="text-gray-400 text-lg text-body">
