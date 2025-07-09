@@ -36,29 +36,28 @@ export default function Header() {
             <a href="#home" className="text-gray-300 hover:text-cyan-400 transition-colors">
               Home
             </a>
-            <a 
-              href="#features" 
+            <button 
               className="text-gray-300 hover:text-cyan-400 transition-colors"
               onClick={(e) => {
                 e.preventDefault();
                 // Small delay to ensure DOM is ready
                 setTimeout(() => {
-                const featuresSection = document.getElementById('features');
-                console.log('Features section found:', featuresSection); // Debug log
-                if (featuresSection) {
-                  featuresSection.scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'start',
-                    inline: 'nearest'
-                  });
-                } else {
-                  console.log('Features section not found');
-                }
+                  const featuresSection = document.getElementById('features');
+                  console.log('Features section found:', featuresSection); // Debug log
+                  if (featuresSection) {
+                    featuresSection.scrollIntoView({ 
+                      behavior: 'smooth',
+                      block: 'start',
+                      inline: 'nearest'
+                    });
+                  } else {
+                    console.log('Features section not found');
+                  }
                 }, 100);
               }}
             >
               Features
-            </a>
+            </button>
             <a href="/docs" className="text-gray-300 hover:text-cyan-400 transition-colors">
               Docs
             </a>
