@@ -67,7 +67,7 @@ export default function Solution() {
                   muted 
                   loop
                   playsInline
-                  poster="/assets/video-thumbnail.jpg" // Optional: Add a thumbnail image (remove this line if you don't have a thumbnail)
+                  poster="/assets/2025-07-09 08-51-11.mp4" // Optional: Add a thumbnail image (remove this line if you don't have a thumbnail)
                 >
                   <source src="/assets/your-video-name.mp4" type="video/mp4" />
                   <source src="/assets/your-video-name.webm" type="video/webm" />
