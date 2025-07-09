@@ -1,23 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { 
-  Terminal, 
-  Copy, 
-  Check, 
-  ChevronDown, 
-  ChevronRight, 
-  Book, 
-  Download, 
-  Play, 
-  Settings, 
-  Mail, 
-  Brain, 
-  FileText, 
-  Docker, 
-  GitBranch,
-  Shield
-} from "lucide-react";
+import { Terminal, Copy, Check, ChevronDown, ChevronRight, Book, Download, Play, Settings, Mail, Brain, FileText, Dock as Docker, GitBranch, Shield } from "lucide-react";
 
 interface NavItem {
   id: string;
