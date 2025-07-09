@@ -197,14 +197,14 @@ export default function FeatureTimeline() {
   ];
 
   return (
-    <section id="features" className="relative py-20 bg-black overflow-hidden">
+    <section id="features" className="relative py-12 sm:py-16 lg:py-20 bg-black overflow-hidden">
       <div className="absolute inset-0">
         <GridBackground />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative z-10 text-center mb-16">
-          <h2 className="text-4xl text-heading text-white mb-4">Powerful Features</h2>
-          <p className="text-xl text-body text-gray-400">
+        <div className="relative z-10 text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl text-heading text-white mb-4">Powerful Features</h2>
+          <p className="text-lg sm:text-xl text-body text-gray-400">
             Everything you need for comprehensive API monitoring
           </p>
         </div>

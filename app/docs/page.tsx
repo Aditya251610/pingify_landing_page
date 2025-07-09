@@ -166,17 +166,17 @@ export default function DocsPage() {
       {/* Header */}
       <header className="sticky top-0 z-40 bg-black/80 backdrop-blur-md border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-14 sm:h-16">
             <a href="/" className="flex items-center space-x-4 hover:opacity-80 transition-opacity cursor-pointer">
-              <Terminal className="h-8 w-8 text-cyan-400" />
+              <Terminal className="h-6 w-6 sm:h-8 sm:w-8 text-cyan-400" />
               <div>
-                <h1 className="text-xl font-bold text-white">Pingify</h1>
-                <p className="text-sm text-gray-400">Documentation</p>
+                <h1 className="text-lg sm:text-xl font-bold text-white">Pingify</h1>
+                <p className="text-xs sm:text-sm text-gray-400">Documentation</p>
               </div>
             </a>
             <div className="flex items-center space-x-4">
-              <Book className="h-5 w-5 text-gray-400" />
-              <span className="text-sm text-gray-400">v1.0.0</span>
+              <Book className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" />
+              <span className="text-xs sm:text-sm text-gray-400">v1.0.0</span>
             </div>
           </div>
         </div>
@@ -184,8 +184,8 @@ export default function DocsPage() {
 
       <div className="flex">
         {/* Sidebar */}
-        <aside className="sticky top-16 h-[calc(100vh-4rem)] w-64 bg-gray-900/30 backdrop-blur-sm border-r border-gray-800 overflow-y-auto">
-          <nav className="p-4 space-y-2">
+        <aside className="hidden lg:block sticky top-14 sm:top-16 h-[calc(100vh-3.5rem)] sm:h-[calc(100vh-4rem)] w-64 bg-gray-900/30 backdrop-blur-sm border-r border-gray-800 overflow-y-auto">
+          <nav className="p-3 sm:p-4 space-y-2">
             {navigationItems.map((item) => (
               <NavItemComponent key={item.id} item={item} />
             ))}
@@ -193,7 +193,7 @@ export default function DocsPage() {
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 max-w-4xl mx-auto px-8 py-8 relative">
+        <main className="flex-1 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative">
           {/* Subtle overlay for better text readability */}
           <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
           <div className="relative z-10">
@@ -205,14 +205,14 @@ export default function DocsPage() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Download className="h-8 w-8 text-cyan-400 mr-3" />
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6 flex items-center">
+                <Download className="h-6 w-6 sm:h-8 sm:w-8 text-cyan-400 mr-2 sm:mr-3" />
                 Installation
               </h2>
               
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-4">Using Go Install</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Using Go Install</h3>
                   <CodeBlock 
                     code="go install github.com/Aditya251610/pingify@latest" 
                     id="go-install"
@@ -220,7 +220,7 @@ export default function DocsPage() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-4">Using Git Clone</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Using Git Clone</h3>
                   <CodeBlock 
                     code={`git clone https://github.com/Aditya251610/pingify.git
 cd pingify
@@ -230,7 +230,7 @@ go build -o pingify`}
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-4">Using Docker</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Using Docker</h3>
                   <CodeBlock 
                     code="docker pull aditya251610/pingify:latest" 
                     id="docker-install"

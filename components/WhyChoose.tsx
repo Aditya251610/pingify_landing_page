@@ -75,42 +75,42 @@ export default function WhyChoose() {
       <div className="relative z-10">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-12 sm:mb-16"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl text-heading text-white mb-4">Why Choose Pingify?</h2>
-            <p className="text-xl text-body text-gray-400">Here's why our customers love us</p>
+            <h2 className="text-3xl sm:text-4xl text-heading text-white mb-4">Why Choose Pingify?</h2>
+            <p className="text-lg sm:text-xl text-body text-gray-400">Here's why our customers love us</p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                className="bg-gray-900/50 backdrop-blur-sm p-8 rounded-xl border border-gray-800 hover:border-cyan-500/50 transition-all group"
+                className="bg-gray-900/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-gray-800 hover:border-cyan-500/50 transition-all group"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+                <div className="flex items-center mb-4 sm:mb-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
                     <feature.icon className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl text-subheading text-white">{feature.title}</h3>
-                    <p className="text-cyan-400 text-caption">{feature.subtitle}</p>
+                    <h3 className="text-lg sm:text-xl text-subheading text-white">{feature.title}</h3>
+                    <p className="text-cyan-400 text-sm sm:text-base">{feature.subtitle}</p>
                   </div>
                 </div>
                 
-                <p className="text-gray-400 mb-6 text-body">{feature.description}</p>
+                <p className="text-gray-400 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">{feature.description}</p>
                 
                 <button 
                   onClick={() => openModal(feature.id)}
-                  className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform transition-transform text-caption"
+                  className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform transition-transform text-sm sm:text-base"
                 >
                   Learn More <ArrowRight className="ml-2 h-4 w-4" />
                 </button>
@@ -126,7 +126,7 @@ export default function WhyChoose() {
             viewport={{ once: true }}
           >
             <button 
-              className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg text-caption hover:from-cyan-600 hover:to-blue-700 transition-all transform hover:scale-105"
+              className="px-6 sm:px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg text-sm sm:text-base hover:from-cyan-600 hover:to-blue-700 transition-all transform hover:scale-105"
               onClick={(e) => {
                 e.preventDefault();
                 setTimeout(() => {
@@ -150,7 +150,7 @@ export default function WhyChoose() {
       {/* Feature Detail Modal */}
       <AnimatePresence>
         {selectedFeature && selectedFeatureData && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
             {/* Backdrop */}
             <motion.div 
               className="absolute inset-0 bg-black/60 backdrop-blur-md"
@@ -162,7 +162,7 @@ export default function WhyChoose() {
             
             {/* Modal Content */}
             <motion.div
-              className="relative bg-gray-900/95 backdrop-blur-sm border border-gray-700 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+              className="relative bg-gray-900/95 backdrop-blur-sm border border-gray-700 rounded-xl sm:rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -170,14 +170,14 @@ export default function WhyChoose() {
               onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal
             >
               {/* Header */}
-              <div className="flex items-center justify-between p-6 border-b border-gray-700">
+              <div className="flex items-center justify-between p-4 sm:p-6 border-b border-gray-700">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <selectedFeatureData.icon className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold text-white">{selectedFeatureData.title}</h2>
-                    <p className="text-cyan-400">{selectedFeatureData.subtitle}</p>
+                    <h2 className="text-xl sm:text-2xl font-bold text-white">{selectedFeatureData.title}</h2>
+                    <p className="text-cyan-400 text-sm sm:text-base">{selectedFeatureData.subtitle}</p>
                   </div>
                 </div>
                 <button
@@ -189,34 +189,34 @@ export default function WhyChoose() {
               </div>
 
               {/* Content */}
-              <div className="p-6 space-y-8">
+              <div className="p-4 sm:p-6 space-y-6 sm:space-y-8">
                 {/* Overview */}
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-4">Overview</h3>
-                  <p className="text-gray-300 text-lg leading-relaxed">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Overview</h3>
+                  <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
                     {selectedFeatureData.detailedContent.overview}
                   </p>
                 </div>
 
                 {/* Key Features */}
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-6">Key Features</h3>
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">Key Features</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                     {selectedFeatureData.detailedContent.keyFeatures.map((feature, index) => (
                       <motion.div
                         key={feature.title}
-                        className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all"
+                        className="bg-gray-800/50 p-4 sm:p-6 rounded-lg sm:rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.3, delay: index * 0.1 }}
                       >
-                        <div className="flex items-start space-x-4">
-                          <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div className="flex items-start space-x-3 sm:space-x-4">
+                          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
                             <feature.icon className="h-5 w-5 text-white" />
                           </div>
                           <div>
-                            <h4 className="text-lg font-semibold text-white mb-2">{feature.title}</h4>
-                            <p className="text-gray-400">{feature.description}</p>
+                            <h4 className="text-base sm:text-lg font-semibold text-white mb-1 sm:mb-2">{feature.title}</h4>
+                            <p className="text-gray-400 text-sm sm:text-base leading-relaxed">{feature.description}</p>
                           </div>
                         </div>
                       </motion.div>
@@ -226,19 +226,19 @@ export default function WhyChoose() {
 
                 {/* Benefits */}
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-6">Benefits</h3>
-                  <div className="bg-gray-800/30 rounded-xl p-6 border border-gray-700">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">Benefits</h3>
+                  <div className="bg-gray-800/30 rounded-lg sm:rounded-xl p-4 sm:p-6 border border-gray-700">
                     <ul className="space-y-4">
                       {selectedFeatureData.detailedContent.benefits.map((benefit, index) => (
                         <motion.li
                           key={index}
-                          className="flex items-start space-x-3"
+                          className="flex items-start space-x-3 sm:space-x-4"
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.3, delay: index * 0.1 }}
                         >
                           <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0" />
-                          <span className="text-gray-300">{benefit}</span>
+                          <span className="text-gray-300 text-sm sm:text-base leading-relaxed">{benefit}</span>
                         </motion.li>
                       ))}
                     </ul>
@@ -247,11 +247,11 @@ export default function WhyChoose() {
               </div>
 
               {/* Footer */}
-              <div className="p-6 border-t border-gray-700 bg-gray-800/30">
+              <div className="p-4 sm:p-6 border-t border-gray-700 bg-gray-800/30">
                 <div className="flex justify-end">
                   <button
                     onClick={closeModal}
-                    className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all"
+                    className="px-4 sm:px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all text-sm sm:text-base"
                   >
                     Got it!
                   </button>
