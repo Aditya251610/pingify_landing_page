@@ -197,7 +197,7 @@ export default function FeatureTimeline() {
   ];
 
   return (
-    <section className="relative py-20 bg-black overflow-hidden">
+    <section id="features" className="relative py-20 bg-black overflow-hidden">
       <div className="absolute inset-0">
         <GridBackground />
       </div>

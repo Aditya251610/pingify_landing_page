@@ -36,7 +36,20 @@ export default function Header() {
             <a href="#home" className="text-gray-300 hover:text-cyan-400 transition-colors">
               Home
             </a>
-            <a href="#features" className="text-gray-300 hover:text-cyan-400 transition-colors">
+            <a 
+              href="#features" 
+              className="text-gray-300 hover:text-cyan-400 transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                const featuresSection = document.getElementById('features');
+                if (featuresSection) {
+                  featuresSection.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                  });
+                }
+              }}
+            >
               Features
             </a>
             <a href="/docs" className="text-gray-300 hover:text-cyan-400 transition-colors">
