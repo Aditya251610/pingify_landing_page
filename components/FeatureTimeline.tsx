@@ -192,8 +192,10 @@ export default function FeatureTimeline() {
             </div>
           </CardContent>
         </Card>
+      )
       ),
     },
+  ]
   ];
 
   return (
