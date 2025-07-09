@@ -53,7 +53,7 @@ export default function FeatureTimeline() {
               </div>
               <div>
                 <p className="text-neutral-200 text-lg mb-6 leading-relaxed">
-                  Get instant alerts via Email or Discord when response times spike or failures occur.
+                  Get instant alerts via Email when response times spike or failures occur.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
@@ -184,7 +184,7 @@ export default function FeatureTimeline() {
                     <div className="text-gray-400 text-sm text-caption">Uptime</div>
                   </div>
                   <div className="bg-gray-800 p-3 rounded-lg border border-gray-700 text-center">
-                    <div className="text-cyan-400 text-lg text-subheading"><10MB</div>
+                    <div className="text-cyan-400 text-lg text-subheading">&lt;10MB</div>
                     <div className="text-gray-400 text-sm text-caption">Memory</div>
                   </div>
                 </div>
@@ -192,10 +192,8 @@ export default function FeatureTimeline() {
             </div>
           </CardContent>
         </Card>
-      )
       ),
     },
-  ]
   ];
 
   return (
@@ -206,7 +204,9 @@ export default function FeatureTimeline() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative z-10 text-center mb-16">
           <h2 className="text-4xl text-heading text-white mb-4">Powerful Features</h2>
-          <p className="text-xl text-body text-gray-400">Everything you need for comprehensive API monitoring</p>
+          <p className="text-xl text-body text-gray-400">
+            Everything you need for comprehensive API monitoring
+          </p>
         </div>
         <div className="relative z-10">
           <Timeline data={timelineData} />
