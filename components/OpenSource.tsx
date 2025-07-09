@@ -84,7 +84,7 @@ export default function OpenSource() {
               viewport={{ once: true }}
             >
               <a 
-                href="https://github.com/Aditya251610/pingify_landing_page" 
+                href="https://github.com/Aditya251610/pingify" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-lg text-caption hover:from-gray-700 hover:to-gray-800 transition-all flex items-center space-x-2 border border-gray-700 hover:border-gray-600"
