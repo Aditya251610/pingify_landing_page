@@ -41,13 +41,20 @@ export default function Header() {
               className="text-gray-300 hover:text-cyan-400 transition-colors"
               onClick={(e) => {
                 e.preventDefault();
+                // Small delay to ensure DOM is ready
+                setTimeout(() => {
                 const featuresSection = document.getElementById('features');
+                console.log('Features section found:', featuresSection); // Debug log
                 if (featuresSection) {
                   featuresSection.scrollIntoView({ 
                     behavior: 'smooth',
-                    block: 'start'
+                    block: 'start',
+                    inline: 'nearest'
                   });
+                } else {
+                  console.log('Features section not found');
                 }
+                }, 100);
               }}
             >
               Features
