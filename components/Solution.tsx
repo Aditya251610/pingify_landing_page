@@ -67,10 +67,10 @@ export default function Solution() {
                   muted 
                   loop
                   playsInline
-                  poster="/assets/video-thumbnail.jpg" // Optional: Add a thumbnail image
+                  poster="/assets/video-thumbnail.jpg" // Optional: Add a thumbnail image (remove this line if you don't have a thumbnail)
                 >
-                  <source src="/assets/demo-video.mp4" type="video/mp4" />
-                  <source src="/assets/demo-video.webm" type="video/webm" />
+                  <source src="/assets/your-video-name.mp4" type="video/mp4" />
+                  <source src="/assets/your-video-name.webm" type="video/webm" />
                   Your browser does not support the video tag.
                 </video>
                 
