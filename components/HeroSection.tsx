@@ -43,17 +43,19 @@ export default function HeroSection() {
         </motion.p>
         
         <motion.div
-          className="text-center"
+          className="flex items-center justify-center min-h-[200px]"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <div className="text-3xl md:text-4xl font-bold text-white mb-4 bg-gradient-to-r from-gray-800/80 to-gray-900/80 backdrop-blur-sm px-8 py-4 rounded-xl border border-gray-700/50 inline-block">
-            <TextGenerateEffect words={sloganWords} />
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-white mb-4 bg-gradient-to-r from-gray-800/80 to-gray-900/80 backdrop-blur-sm px-8 py-4 rounded-xl border border-gray-700/50 inline-block">
+              <TextGenerateEffect words={sloganWords} />
+            </div>
+            <p className="text-gray-400 text-lg">
+              The complete solution for modern API management
+            </p>
           </div>
-          <p className="text-gray-400 text-lg">
-            The complete solution for modern API management
-          </p>
         </motion.div>
       </div>
     </section>
