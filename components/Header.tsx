@@ -27,10 +27,10 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-2">
+          <a href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer">
             <Terminal className="h-8 w-8 text-cyan-400" />
             <span className="text-xl font-bold text-white">Pingify</span>
-          </div>
+          </a>
           
           <nav className="hidden md:flex space-x-8">
             <a href="#home" className="text-gray-300 hover:text-cyan-400 transition-colors">

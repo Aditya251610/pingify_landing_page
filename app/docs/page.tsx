@@ -167,13 +167,13 @@ export default function DocsPage() {
       <header className="sticky top-0 z-40 bg-black/80 backdrop-blur-md border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-4">
+            <a href="/" className="flex items-center space-x-4 hover:opacity-80 transition-opacity cursor-pointer">
               <Terminal className="h-8 w-8 text-cyan-400" />
               <div>
                 <h1 className="text-xl font-bold text-white">Pingify</h1>
                 <p className="text-sm text-gray-400">Documentation</p>
               </div>
-            </div>
+            </a>
             <div className="flex items-center space-x-4">
               <Book className="h-5 w-5 text-gray-400" />
               <span className="text-sm text-gray-400">v1.0.0</span>
