@@ -67,9 +67,12 @@ export default function WhyChoose() {
 
   return (
     <section className="relative py-20 bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-900/20 via-black to-black"></div>
-      <div className="relative">
+      {/* Enhanced gradient layers */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-blue-900/20 to-cyan-900/30"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-800/40 via-gray-900/60 to-black"></div>
+      <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,_var(--tw-gradient-stops))] from-cyan-900/10 via-purple-900/10 via-blue-900/10 to-cyan-900/10"></div>
+      <div className="relative z-10">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
