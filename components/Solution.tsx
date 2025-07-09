@@ -58,22 +58,61 @@ export default function Solution() {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gray-900 p-6 rounded-xl border border-gray-800">
-              <div className="bg-gray-800 p-4 rounded-lg mb-4">
-                <div className="flex items-center space-x-2 mb-3">
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                </div>
-                <div className="space-y-2">
-                  <div className="h-2 bg-cyan-500 rounded w-3/4"></div>
-                  <div className="h-2 bg-blue-500 rounded w-1/2"></div>
-                  <div className="h-2 bg-purple-500 rounded w-2/3"></div>
+            <div className="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-cyan-500/50 transition-all duration-300">
+              {/* Option 1: For local video file (once you add it to public folder) */}
+              <div className="relative aspect-video rounded-lg overflow-hidden mb-4 bg-gray-800">
+                <video 
+                  className="w-full h-full object-cover"
+                  autoPlay 
+                  muted 
+                  loop
+                  playsInline
+                  poster="/assets/video-thumbnail.jpg" // Optional: Add a thumbnail image
+                >
+                  <source src="/assets/demo-video.mp4" type="video/mp4" />
+                  <source src="/assets/demo-video.webm" type="video/webm" />
+                  Your browser does not support the video tag.
+                </video>
+                
+                {/* Play button overlay (optional) */}
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 hover:opacity-100 transition-opacity">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                    <div className="w-0 h-0 border-l-[12px] border-l-white border-y-[8px] border-y-transparent ml-1"></div>
+                  </div>
                 </div>
               </div>
+              
+              {/* 
+              Option 2: For YouTube embed (replace VIDEO_ID with your actual YouTube video ID)
+              <div className="relative aspect-video rounded-lg overflow-hidden mb-4">
+                <iframe
+                  src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=YOUR_VIDEO_ID"
+                  title="Pingify Demo"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+              */}
+              
+              {/* 
+              Option 3: For Vimeo embed (replace VIDEO_ID with your Vimeo video ID)
+              <div className="relative aspect-video rounded-lg overflow-hidden mb-4">
+                <iframe
+                  src="https://player.vimeo.com/video/YOUR_VIDEO_ID?autoplay=1&muted=1&loop=1"
+                  title="Pingify Demo"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+              */}
+              
               <div className="text-center">
-                <h3 className="text-white text-subheading mb-2">API Dashboard</h3>
-                <p className="text-gray-400 text-sm text-caption">Monitor all your APIs in one place</p>
+                <h3 className="text-white text-subheading mb-2">Pingify in Action</h3>
+                <p className="text-gray-400 text-sm text-caption">See how easy it is to monitor your APIs</p>
               </div>
             </div>
           </motion.div>
