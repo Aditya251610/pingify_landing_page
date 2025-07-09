@@ -47,10 +47,6 @@ export default function OpenSource() {
                 <Star className="h-12 w-12 text-yellow-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Star on GitHub</h3>
                 <p className="text-gray-400 mb-4">Show your support and stay updated with the latest releases</p>
-                <div className="flex items-center justify-center space-x-2 text-yellow-400">
-                  <Star className="h-4 w-4 fill-current" />
-                  <span className="font-semibold">1.2k+ Stars</span>
-                </div>
               </motion.div>
               
               <motion.div
@@ -64,10 +60,6 @@ export default function OpenSource() {
                 <GitFork className="h-12 w-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Fork & Contribute</h3>
                 <p className="text-gray-400 mb-4">Help us build the best API monitoring tool together</p>
-                <div className="flex items-center justify-center space-x-2 text-green-400">
-                  <GitFork className="h-4 w-4" />
-                  <span className="font-semibold">200+ Forks</span>
-                </div>
               </motion.div>
               
               <motion.div
@@ -81,15 +73,11 @@ export default function OpenSource() {
                 <Users className="h-12 w-12 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Join Community</h3>
                 <p className="text-gray-400 mb-4">Connect with other developers and share your experience</p>
-                <div className="flex items-center justify-center space-x-2 text-purple-400">
-                  <Users className="h-4 w-4" />
-                  <span className="font-semibold">500+ Contributors</span>
-                </div>
               </motion.div>
             </div>
             
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              className="flex justify-center items-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -98,11 +86,6 @@ export default function OpenSource() {
               <button className="px-8 py-4 bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-lg font-semibold hover:from-gray-700 hover:to-gray-800 transition-all flex items-center space-x-2 border border-gray-700 hover:border-gray-600">
                 <Github className="h-5 w-5" />
                 <span>View on GitHub</span>
-              </button>
-              
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center space-x-2">
-                <Star className="h-5 w-5" />
-                <span>Star Repository</span>
               </button>
             </motion.div>
             
